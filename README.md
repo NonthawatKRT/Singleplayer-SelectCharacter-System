@@ -1,75 +1,107 @@
-# Singleplayer-SelectCharacter-System
-This is StarterKit for making SinglePlayer Character Selection
+# Singleplayer Select Character System
 
-**This Project Using**
-- UnityEditor 2022.3.62f1
-- TextMesh Pro
-- Starter Assets - ThirdPerson 1.1.6 (released on Sep 11, 2024)
-- glTFast 6.13.0 https://github.com/atteneder/glTFast
-- UniVRM 0.129.3 https://github.com/vrm-c/UniVRM
-- Unity-UI-Rounded-Corners v3.0.2 candidate https://github.com/ReForge-Mode/Unity_UI_Rounded_Corners
+A **Starter Kit** for implementing a character selection system in single-player Unity projects.
 
-**Adding More Character**
+---
 
-- To Add more Character Avatar first you need to create you import you new character
+## 📦 Project Details
 
-  <img width="1638" height="192" alt="image" src="https://github.com/user-attachments/assets/0af900dc-e7f5-44d4-8100-0d630764e6bb" />
+This project is built using:
 
+- **Unity Editor**: 2022.3.62f1  
+- **TextMesh Pro**
+- **Starter Assets – Third Person**: v1.1.6 (Released Sep 11, 2024)  
+- **glTFast**: [v6.13.0](https://github.com/atteneder/glTFast)  
+- **UniVRM**: [v0.129.3](https://github.com/vrm-c/UniVRM)  
+- **Unity UI Rounded Corners**: [v3.0.2 (candidate)](https://github.com/ReForge-Mode/Unity_UI_Rounded_Corners)
 
-- if yours character dont have texture and materails you need to create folder to extract the materails and textures
+---
 
-  <img width="1638" height="208" alt="image" src="https://github.com/user-attachments/assets/20cc3e8f-d946-4c78-a9f4-faba496365b4" />
+## ➕ Adding a New Character
 
-- Extract materails and texture to folder
+Follow the steps below to add a new character avatar into the system.
 
-  <img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/1a334a5e-1087-4b01-b509-c12ff0283ba9" />
+### 1. Import Your Character
 
-- Change Rig Animation Type to Humanoid
+Import your character model into the Unity project.
 
-  <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/08100210-f5a1-4451-a970-55d7f9693d37" />
+![Import Character](https://github.com/user-attachments/assets/0af900dc-e7f5-44d4-8100-0d630764e6bb)
 
-- Duplicate character form character list and replace old character modle with new one
+### 2. Extract Materials and Textures
 
-  - **Old version**
-    
-    <img width="300" height="450" alt="image" src="https://github.com/user-attachments/assets/f133ff31-b948-4ffc-9833-4e1b45c904cc" />
+If your model doesn’t include textures or materials:
+- click the model in the inspector you will see → **Materials...**
+- Choose or create a folder for extract Materails and Textures.
 
-  - **New version**
-    
-    <img width="300" height="450" alt="image" src="https://github.com/user-attachments/assets/3cc8c161-84c1-4593-9ebe-f4bdd2332cab" />
+![Extract Materials Option](https://github.com/user-attachments/assets/20cc3e8f-d946-4c78-a9f4-faba496365b4)  
+![Extract Materials](https://github.com/user-attachments/assets/1a334a5e-1087-4b01-b509-c12ff0283ba9)
 
-- Apply Avata to NewCharacter Animators
-  - Put the Avatar form you newcharacter model in to the avatar field in animator component in playerAmature
- 
-    <img width="2559" height="1235" alt="image" src="https://github.com/user-attachments/assets/e40c7cf5-d2f8-47e9-8ad5-d8de298cce30" />
+### 3. Set Rig Type to Humanoid
 
-    *If you can't find the avatar component form your newcharacter model plese check you have change the animation type to Humanoid and Change Avatar Definition field to Create Form This Avatar and hit Apply
+Go to the **Rig** tab in the model’s Inspector, and:
 
-  - Assign your newcharacter to the Characters list in MainmenuController
-    <img width="2559" height="716" alt="image" src="https://github.com/user-attachments/assets/ca7fa37f-d5d9-4fbc-9276-cd5ddf98fbd1" />
+- Set **Animation Type** to **Humanoid**
+- Click **Apply**
 
-- Modify Character Slot Canvas Add you new Character card
+![Set to Humanoid](https://github.com/user-attachments/assets/08100210-f5a1-4451-a970-55d7f9693d37)
 
-  <img width="1956" height="644" alt="image" src="https://github.com/user-attachments/assets/77366f8a-c860-4983-b950-92b6fceb3368" />
+### 4. Replace Character in Character List
 
-- Increase The Character Index in the Card Button
-  *For me now this is the 4 index
-  
-  <img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/43242bcb-8053-482e-b004-a360ed790b4d" />
+Duplicate one of the existing character prefabs and replace the model with your new one.
 
-- Go to mainmap scene and do the same thing to the characterList
+**Old Character:**  
+<img width="300" height="450" src="https://github.com/user-attachments/assets/f133ff31-b948-4ffc-9833-4e1b45c904cc" />
 
-  - replace old character model with yours
-  
-    <img width="1953" height="1226" alt="image" src="https://github.com/user-attachments/assets/82cde35c-fa84-44a5-be13-06a2b2495746" />
+**New Character:**  
+<img width="300" height="450" src="https://github.com/user-attachments/assets/3cc8c161-84c1-4593-9ebe-f4bdd2332cab" />
 
-  - Change Avatar in animator component of PlayerAmature
- 
-    <img width="2559" height="1258" alt="image" src="https://github.com/user-attachments/assets/e234e645-a41d-41de-9678-91cd041b7a7e" />
+### 5. Assign Avatar to Animator
 
-  - Add your newcharacter to character list in GameManager
- 
-    <img width="2559" height="657" alt="image" src="https://github.com/user-attachments/assets/020212bf-cfa6-4a84-a74a-39b2d3cb807d" />
+Assign the avatar from your model to the **Animator** component of the `PlayerArmature`.
 
+![Assign Avatar](https://github.com/user-attachments/assets/e40c7cf5-d2f8-47e9-8ad5-d8de298cce30)
 
+> 🛠 **Tip:** If the Avatar field doesn’t appear, ensure:
+> - The model’s **Animation Type** is set to **Humanoid**
+> - The **Avatar Definition** is set to **Create From This Model**
+> - Click **Apply** again.
 
+### 6. Add Character to Main Menu
+
+- Go to the `MainMenuController` object
+- Add your new character to the **Characters** list
+
+![Add to MainMenuController](https://github.com/user-attachments/assets/ca7fa37f-d5d9-4fbc-9276-cd5ddf98fbd1)
+
+### 7. Update Character Slot UI
+
+In the character selection canvas:
+
+- Duplicate an existing character card
+- Update it to reference your new character
+- Adjust the **Character Index** in the card’s button (e.g., index 4)
+
+![Character Card](https://github.com/user-attachments/assets/77366f8a-c860-4983-b950-92b6fceb3368)  
+![Character Index](https://github.com/user-attachments/assets/43242bcb-8053-482e-b004-a360ed790b4d)
+
+### 8. Update Main Map Scene
+
+Repeat similar steps in the `MainMap` scene:
+
+- Replace the old character model with your new one in the scene
+
+![Replace Model](https://github.com/user-attachments/assets/82cde35c-fa84-44a5-be13-06a2b2495746)
+
+- Update the Animator’s **Avatar** in the `PlayerArmature`
+
+![MainMap Avatar](https://github.com/user-attachments/assets/e234e645-a41d-41de-9678-91cd041b7a7e)
+
+- Add your character to the **Character List** in the `GameManager`
+
+![GameManager Character List](https://github.com/user-attachments/assets/020212bf-cfa6-4a84-a74a-39b2d3cb807d)
+
+---
+
+## ✅ You're Done!
+
+Your new character should now be selectable in the main menu and appear correctly in the game.
