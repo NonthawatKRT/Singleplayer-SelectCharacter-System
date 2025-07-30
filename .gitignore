@@ -97,3 +97,21 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# 3rd Party Assets Downloaded from Unity Assets Store
+/[Aa]ssets/_ThirdPartyAssets/
+/[Aa]ssets/_ThirdPartyAssets.meta
+
+#Agora Plugins
+/[Aa]ssets/Plugins/Agora_Unity_WebGL_Refactor 10 Release/AgoraEngine/Plugins/*
+
+#Exclude Assets
+/[Aa]ssets/_ExcludeAssets/
+/[Aa]ssets/_ExcludeAssets.meta
